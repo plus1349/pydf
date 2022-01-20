@@ -27,7 +27,7 @@ def _execute_wk(*args, input=None):
     :return: stdout, stderr
     """
     wk_args = (WK_PATH,) + args
-    return subprocess.run(wk_args, input=input, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return subprocess.run(wk_args, input=input, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
 def _convert_args(**py_args):
